@@ -1,6 +1,7 @@
 #' Shiny module providing GUI and server logic for the subscription v2 tab
 #'
 #' @param id Character string module namespace
+#' @name abonnement
 NULL
 
 abonnement_ui <- function(id) {

@@ -1,6 +1,7 @@
 #' Shiny module providing GUI and server logic for the intro tab
 #'
 #' @param id Character string module namespace
+#' @name veiledning
 NULL
 
 veiledning_ui <- function(id) {

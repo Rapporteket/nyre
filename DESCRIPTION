@@ -1,17 +1,9 @@
-Package: rapRegTemplate
+Package: nyre
 Type: Package
-Title: Template to be used for Making New Registries at Rapportekt
+Title: Norsk Nyreregister
 Version: 1.2.0
-Authors@R: c(
-    person(given = "Are",
-           family = "Edvardsen",
-           role = c("aut", "cre"),
-           email = "biorakel@gmail.com",
-           comment = c(ORCID = "0000-0002-5210-3656")))
-Maintainer: Are Edvardsen <biorakel@gmail.com>
-Description: Boilerplate R code for making result services for registries at
-  Rapporteket. May be used as templalte for establishin such services or as
-  plain exercise for training purposes.
+Maintainer: Markus Hovd <mhovd@ous-hf.no>
+Description: General reports and statistics from the Norwegian Renal Registry
 Depends:
   R (>= 3.5.0)
 Imports:
@@ -21,12 +13,12 @@ Imports:
   shiny,
   shinyalert
 Remotes:
-  Rapporteket/rapbase@main
+  Rapporteket/nyre@main
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
-URL: http://github.com/Rapporteket/rapRegTemplate
-BugReports: http://github.com/Rapporteket/rapRegTemplate/issues
+RoxygenNote: 7.3.2
+URL: http://github.com/Rapporteket/nyre
+BugReports: http://github.com/Rapporteket/nyre/issues
 Suggests: 
     testthat

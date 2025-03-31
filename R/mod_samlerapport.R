@@ -1,6 +1,7 @@
 #' Shiny module providing GUI and server logic for the report tab
 #'
 #' @param id Character string module namespace
+#' @name samlerapport
 NULL
 
 samlerapport_ui <- function(id) {

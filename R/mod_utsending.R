@@ -1,6 +1,7 @@
 #' Shiny module providing GUI and server logic for the dispatch tab
 #'
 #' @param id Character string module namespace
+#' @name utsending
 NULL
 
 utsending_ui <- function(id) {
