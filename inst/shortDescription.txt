@@ -1,0 +1,1 @@
+rapRegTemplate er en enkel mal som kan brukes som utgangspunkt for etablering og utvikling av resultattjenester for kvalitetsregistre på Rapporteket. Malen inneholder noen typiske elementer som er vanlig å benytte. Men husk, det er fult mulig å utvide eller lage ny funksjonalitet som går utover det som ligger i denne malen.

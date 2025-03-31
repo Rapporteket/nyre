@@ -1,0 +1,54 @@
+---
+params:
+  type: pdf
+  var: mpg
+  bins: 5
+title: Samlerapport
+subtitle: en eksempelrapport fra rapRegTemplate
+author: Rapporteket
+userFullName: Tore Tester
+registryName: SKDE
+reglogo: '`r system.file("logo.png", package = "rapRegTemplate")`'
+regtext: '`r readLines(system.file("shortDescription.txt", package = "rapRegTemplate"))`'
+date: '`r format(Sys.time(), "%d. %B %Y")`'
+abstract: Om rapporten trenger et sammendrag kan det settes inn her
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(kableExtra)
+library(rapbase)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Samlerapport
+Dette er eksempel på en samlerapport som er egnet til å kobinere presentasjon
+av dynamisk tekst, tabeller og figurer. Samlerapporter kan vises i selve
+Rapporeket, lastes ned eller sendes (rutinemessig) per epost til de som ønsker
+det.
+
+
+## Eksempel på dynamisk tekst
+Idag, `r format(Sys.Date(), "%A %d. %b %Y")` er det
+`r as.numeric(format(Sys.Date(), "%j"))` dager siden nyttår.
+
+
+## Eksempel på tabell
+Tabell \@ref(tab:eksTab) under er kjedelig, men illustrerer poenget.
+
+```{r eksTab}
+dt <- mtcars[1:6, ][params$var]
+cap <- paste("Eksempeltabell som viser variabelen", params$var, "fra mtcars.")
+
+rapbase::mst(tab = dt, type = params$type, cap = cap)
+
+```
+
+
+## Eksempel på figur
+Samlerapporter kan også inneholde figurer basert på data slik som vist i Figur \@ref(fig:eksFig).
+
+```{r eksFig, echo=FALSE, out.width="80%", fig.cap=paste("Eksempelfigur som viser frekvensfordelingen av", params$var, "fra mtcars.")}
+f <- rapRegTemplate::makeHist(df = mtcars, var = params$var, bins = params$bins, makeTable = FALSE)
+```

@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+figure
+*.html
+inst/shinyApps/app1/*.md
+inst/*.md
+docs/
+*.tar.gz

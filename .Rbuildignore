@@ -1,0 +1,11 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^LICENSE\.md$
+^Rprofile.site$
+^Dockerfile$
+^\.lintr$
+^\.github$
+^renovate.json$
