@@ -34,7 +34,7 @@ jobs:
         image: snyktest
         args: --file=Dockerfile --severity-threshold=high
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v3
+      uses: github/codeql-action/upload-sarif@v4
       with:
         sarif_file: snyk.sarif
     - name: Accept only vulnerability levels below high 
