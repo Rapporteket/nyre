@@ -11,10 +11,10 @@ Sys.setenv(FALK_EXTENDED_USER_RIGHTS = "[
 ]")
 Sys.setenv(FALK_APP_ID = "80")
 
-Sys.setenv(MYSQL_DB_LOG = "raplog")
-Sys.setenv(MYSQL_DB_AUTOREPORT = "autoreport")
+Sys.setenv(MYSQL_DB_LOG = "db_log")
+Sys.setenv(MYSQL_DB_AUTOREPORT = "db_autoreport")
 Sys.setenv(MYSQL_DB_DATA = "nyre")
-Sys.setenv(MYSQL_HOST = "db")
+Sys.setenv(MYSQL_HOST = "localhost")
 Sys.setenv(MYSQL_USER = "root")
 Sys.setenv(MYSQL_PASSWORD = "root")
 

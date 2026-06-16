@@ -2,8 +2,8 @@ x-environment: &environment
   MYSQL_HOST: db
   MYSQL_USER: root
   MYSQL_PASSWORD: root
-  MYSQL_DB_LOG: raplog
-  MYSQL_DB_AUTOREPORT: autoreport
+  MYSQL_DB_LOG: db_log
+  MYSQL_DB_AUTOREPORT: db_autoreport
   FALK_APP_ID: 80
   USERORGID: "nyre"
   SHINYPROXY_USERNAME: test@tester.no
