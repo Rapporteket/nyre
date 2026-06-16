@@ -1,5 +1,5 @@
 ---
-title: 'Informasjon om rapRegTemplate'
+title: 'Informasjon om nyre'
 author: 'Rapporteket'
 date: '`r format(Sys.time(), "%d. %B %Y")`'
 output: 
