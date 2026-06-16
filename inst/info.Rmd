@@ -1,0 +1,49 @@
+---
+title: 'Informasjon om rapRegTemplate'
+author: 'Rapporteket'
+date: '`r format(Sys.time(), "%d. %B %Y")`'
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+
+
+Dette er en enkel informasjonsside med masse spennende informasjon om pakken.
+
+Denne kan også vise noen figurer og tabeller lagd i R.
+
+### Eksempel på figur
+
+```{r pressure, echo=FALSE}
+
+pressure |>
+  ggplot2::ggplot(ggplot2::aes(x = temperature, y = pressure)) +
+  ggplot2::geom_point(colour = "#003087", size = 3) +
+  ggplot2::geom_point(colour = "#6CACE4", size = 1.5) +
+  ggplot2::ylab("Trykk") +
+  ggplot2::xlab("Temperatur") +
+  ggplot2::ggtitle("Relasjon damptrykk og temperatur, kvikksølv") +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(
+    plot.title = ggplot2::element_text(size = 14, hjust = .1, vjust = 2.5),
+    axis.title.x = ggplot2::element_text(size = 10, face = "italic"),
+    axis.title.y = ggplot2::element_text(size = 10, face = "italic")
+  )
+
+```
+
+### Eksempel på tabell
+
+```{r cars, echo=FALSE}
+table <- head(pressure) |>
+  dplyr::rename(
+    temperatur = temperature,
+    trykk = pressure
+  ) |>
+  kableExtra::kbl() |>
+  kableExtra::kable_styling(c("striped", "hover")) |>
+  kableExtra::column_spec(1, border_right = TRUE, width = "10em") |>
+  kableExtra::column_spec(2, border_right = TRUE, width = "15em")
+table
+```

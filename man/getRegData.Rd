@@ -2,12 +2,9 @@
 % Please edit documentation in R/GetRegData.R
 \name{getRegData}
 \alias{getRegData}
-\title{Provide dataframe of registry data}
+\title{Provides a dataframe containing data from a registry}
 \usage{
-getRegData(registryName)
-}
-\arguments{
-\item{registryName}{String providing the current registryName}
+getRegData()
 }
 \value{
 regData data frame

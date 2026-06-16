@@ -2,13 +2,18 @@
 % Please edit documentation in R/run_app.R
 \name{run_app}
 \alias{run_app}
-\title{Run the imongr Shiny Application}
+\title{Run the Shiny Application}
 \usage{
-run_app()
+run_app(browser = FALSE, logAsJson = FALSE)
+}
+\arguments{
+\item{browser}{Open app in browser window}
+
+\item{logAsJson}{Log in json-format}
 }
 \value{
-An object representeing the imongr app
+An object representing the app
 }
 \description{
-Run the imongr Shiny Application
+Run the Shiny Application
 }
