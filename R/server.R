@@ -1,4 +1,4 @@
-#' Server logic for the rapRegTemplate app
+#' Server logic for the nyre app
 #'
 #' @param input shiny input object
 #' @param output shiny output object
@@ -18,7 +18,7 @@ app_server <- function(input, output, session) {
     "navbar-widget",
     orgName = "pilot",
     map_orgname = map_orgname,
-    caller = "rapRegTemplate"
+    caller = "nyre"
   )
 
   meslinger_data <- getFakeRegData()
@@ -41,7 +41,7 @@ app_server <- function(input, output, session) {
 
   rapbase::autoReportServer(
     id = "subscription",
-    registryName = "rapRegTemplate",
+    registryName = "nyre",
     type = "subscription",
     paramNames = subParamNames,
     paramValues = subParamValues,
@@ -132,7 +132,7 @@ app_server <- function(input, output, session) {
 
   rapbase::autoReportServer(
     id = "dispatchment",
-    registryName = "rapRegTemplate",
+    registryName = "nyre",
     type = "dispatchment",
     org = org$value,
     paramNames = disParamNames,

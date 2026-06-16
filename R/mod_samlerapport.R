@@ -57,7 +57,7 @@ samlerapport_server <- function(id) {
       ## vis
       output$samlerapport <- shiny::renderUI({
         rapbase::renderRmd(
-          system.file("samlerapport.Rmd", package = "rapRegTemplate"),
+          system.file("samlerapport.Rmd", package = "nyre"),
           outputType = "html_fragment",
           params = list(type = "html",
                         var = input$varS,

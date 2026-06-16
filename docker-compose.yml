@@ -5,10 +5,10 @@ x-environment: &environment
   MYSQL_DB_LOG: raplog
   MYSQL_DB_AUTOREPORT: autoreport
   FALK_APP_ID: 80
-  FALK_EXTENDED_USER_RIGHTS: "[{\"A\":80,\"R\":\"LC\",\"U\":1},{\"A\":80,\"R\":\"SC\",\"U\":2},{\"A\":81,\"R\":\"LC\",\"U\":2}]"
-  USERORGID: "pilot"
+  USERORGID: "nyre"
   SHINYPROXY_USERNAME: test@tester.no
-  SHINYPROXY_USERGROUPS: "pilot"
+  SHINYPROXY_USERGROUPS: "nyre"
+  SHINYPROXY_APPID: "nyre"
 
 
 services:
@@ -20,35 +20,14 @@ services:
     volumes:
       - ./dev/db:/docker-entrypoint-initdb.d
 
-  mssql:
-    image: mcr.microsoft.com/mssql/server:2025-latest
-    platform: "linux/amd64"
-    environment:
-      MSSQL_SA_PASSWORD: "Your_password123"
-      ACCEPT_EULA: "Y"
-    volumes:
-      - ./dev/mssql/init.sql:/db/init.sql
-      - ./dev/mssql/entrypoint.sh:/entrypoint.sh
-    entrypoint: ["/bin/bash", "/entrypoint.sh"]
-
-  app:
-    image: rapporteket/rapregtemplate:main
-    ports:
-      - 3838:3838
-    environment:
-      << : *environment
-    platform: "linux/amd64"
-
   dev:
     depends_on:
       - db
-      - mssql
     image: rapporteket/rstudio:main
     volumes:
       - ~/.ssh:/home/rstudio/.ssh
       - ~/.gitconfig:/home/rstudio/.gitconfig
-      - ../rapbase/.:/home/rstudio/rapbase
-      - .:/home/rstudio/rapregtemplate
+      - .:/home/rstudio/nyre
     ports:
       - "8787:8787"
     restart: "no"
@@ -60,7 +39,6 @@ services:
   adminer:
     depends_on:
       - db
-      - mssql
     image: adminer
     restart: "no"
     environment:

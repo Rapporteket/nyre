@@ -69,7 +69,7 @@ info_server <- function(id, user) {
       # Info
       output$info <- shiny::renderUI({
         rapbase::renderRmd(
-          system.file("info.Rmd", package = "rapRegTemplate"),
+          system.file("info.Rmd", package = "nyre"),
           outputType = "html_fragment"
         )
       })

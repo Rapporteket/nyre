@@ -8,49 +8,8 @@
 [![Doc](https://img.shields.io/badge/Doc--grey.svg)](https://rapporteket.github.io/rapRegTemplate/)
 <!-- badges: end -->
   
-# Lag et register i Rapporteket <img src="man/figures/logo.svg" align="right" height="150" />
+# Nyre <img src="man/figures/logo.svg" align="right" height="150" />
 
-Beskrivelsen under er ikke nødvendigvis utfyllende og forutsetter kjennskap til R og bruk av git og GitHub.
-Som en ekstra støtte anbefales [R pacakges](http://r-pkgs.had.co.nz/) av Hadley Wickham og spesielt [beskrivelsen av git og GitHub](http://r-pkgs.had.co.nz/git.html#git-rstudio).
-
-## Prøv templatet
-
-1. Hent ned prosjektet [rapRegTemplate](https://github.com/Rapporteket/rapRegTemplate) (`git clone https://github.com/Rapporteket/rapRegTemplate.git` i en terminal).
-1. Åpne prosjektet i RStudio (åpne fila `rapRegTemplate.Rproj`)
-1. Installér pakken (`devtools::install()`)
-1. Definer noen miljøvariabler (`source("dev/renv.R")`)
-1. Start Shiny-applikasjonen (`run_app(browser = TRUE)`)
-1. Navigér i applikasjonen for å se på struktur og farger (innhold mangler)
-
-## Lag ditt eget prosjekt basert på templatet
-
-Denne delen kan være relevant om det er ønskelig å benytte templatetet som utgangspunkt for etablering av nye registre på Rapporteket.
-
-1. Hent ned prosjektet [rapRegTemplate](https://github.com/Rapporteket/rapRegTemplate)
-2. Slett mappen `.git`
-3. Initiér nytt git-repositor 
-```bash
-  git init .
-  git add .
-  git commit -m "init commit"
-  ```
-4. Erstatt `rapRegTemplate` med valgfritt pakkenavn i koden og rydd i prosjektet (f.eks. ved bruk av *vscode*).
-5. Bygg, installér og last pakken i R
-6. Test gjerne at innebygget Shiny-applikasjon fungerer på samme vis som i prosjektet "rapRegTemplate"
-
-## Sjekk inn endringer i git
-Git er et verktøy for versjonskontroll som gir mulighet for å spore endringer og samarbeide om kode. Basale funksjoner i git er svært nyttinge, men kan virke forvirrende i starten. Sørg for at egen kode (bestandig) versjonshåndteres (i git) og at koden finnes sentralisert og tilgjengelig for deg selv og andre (på GitHub).
-
-1. Sett opp git lokalt og etabler et sentralt repository for din R-pakke gjennom å følge [Hadley Wickhams veiledning](http://r-pkgs.had.co.nz/git.html#git-rstudio)
-1. Om du ikke har det fra før, etabler et ssh-nøkkelpar for sikker kommunikasjon med GitHub
-
-
-## Dytt (push) R-pakken til GitHub
-1. Om du ikke allerede har gjort det, lag din egen bruker på GitHub (se over)
-1. Om du ikke allerede har gjort det, [legg ut den offentlige delen av ditt ssh-nøkkelpar på din github-konto](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account) 
-1. Om du ikke allerede har gjort det, bli medlem av organisasjonen Rapporteket på GitHub
-1. Under din egen side på GitHub, opprett et Repository med navn tilsvarende din egen pakke (_e.g._ "testRegister")
-1. I RStudio, push pakken til ditt nye Repository på GitHub
 
 ## Bygg docker image lokalt
 

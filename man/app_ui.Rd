@@ -2,7 +2,7 @@
 % Please edit documentation in R/ui.R
 \name{app_ui}
 \alias{app_ui}
-\title{Client (ui) for the rapRegTemplate app}
+\title{Client (ui) for the nyre app}
 \usage{
 app_ui()
 }
@@ -10,5 +10,5 @@ app_ui()
 An shiny app ui object
 }
 \description{
-Client (ui) for the rapRegTemplate app
+Client (ui) for the nyre app
 }

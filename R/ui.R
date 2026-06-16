@@ -1,11 +1,11 @@
-#' Client (ui) for the rapRegTemplate app
+#' Client (ui) for the nyre app
 #'
 #' @return An shiny app ui object
 #' @export
 
 app_ui <- function() {
 
-  regTitle <- "rapRegTemplate"
+  regTitle <- "nyre"
 
   shiny::tagList(
     shiny::navbarPage(

@@ -1,4 +1,4 @@
-Package: rapRegTemplate
+Package: nyre
 Type: Package
 Title: Template to be used for Making New Registries at Rapportekt
 Version: 1.0.0
@@ -30,8 +30,8 @@ Remotes:
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-URL: http://github.com/Rapporteket/rapRegTemplate
-BugReports: http://github.com/Rapporteket/rapRegTemplate/issues
+URL: http://github.com/Rapporteket/nyre
+BugReports: http://github.com/Rapporteket/nyre/issues
 Suggests: 
     testthat
 Config/roxygen2/version: 8.0.0

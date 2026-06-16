@@ -2,7 +2,7 @@
 % Please edit documentation in R/server.R
 \name{app_server}
 \alias{app_server}
-\title{Server logic for the rapRegTemplate app}
+\title{Server logic for the nyre app}
 \usage{
 app_server(input, output, session)
 }
@@ -17,5 +17,5 @@ app_server(input, output, session)
 A shiny app server object
 }
 \description{
-Server logic for the rapRegTemplate app
+Server logic for the nyre app
 }
