@@ -15,9 +15,6 @@ abstract: Om rapporten trenger et sammendrag kan det settes inn her
 ---
 
 ```{r setup, include=FALSE}
-library(knitr)
-library(kableExtra)
-library(rapbase)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
