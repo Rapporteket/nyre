@@ -18,13 +18,11 @@ Imports:
     dplyr,
     DT,
     ggplot2,
-    kableExtra,
     knitr,
     palmerpenguins,
     rapbase (>= 3.6.0),
     rlang,
-    shiny,
-    shinyalert
+    shiny
 Remotes:
   Rapporteket/rapbase
 License: GPL-3
