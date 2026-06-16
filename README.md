@@ -5,7 +5,6 @@
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![GitHub open issues](https://img.shields.io/github/issues/rapporteket/nyre.svg)](https://github.com/rapporteket/nyre/issues)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Doc](https://img.shields.io/badge/Doc--grey.svg)](https://rapporteket.github.io/nyre/)
 <!-- badges: end -->
   
 # Nyre <img src="man/figures/logo.svg" align="right" height="150" />
