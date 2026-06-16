@@ -68,12 +68,12 @@ samlerapport_server <- function(id) {
       ## last ned
       output$downloadSamlerapport <- shiny::downloadHandler(
         filename = function() {
-          basename(tempfile(pattern = "rapRegTemplateSamlerapport",
+          basename(tempfile(pattern = "nyreSamlerapport",
                             fileext = paste0(".", input$formatS)))
         },
         content = function(file) {
           srcFile <-
-            normalizePath(system.file("samlerapport.Rmd", package = "rapRegTemplate"))
+            normalizePath(system.file("samlerapport.Rmd", package = "nyre"))
           fn <- rapbase::renderRmd(srcFile, outputType = input$formatS,
                                    params = list(type = input$formatS,
                                                  var = input$varS,
