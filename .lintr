@@ -1,3 +1,5 @@
 linters: linters_with_defaults(
-  object_name_linter(c("camelCase", "snake_case")),
-  line_length_linter(120))
+  object_name_linter(c("camelCase", "snake_case", "CamelCase")),
+  line_length_linter(120),
+  return_linter = NULL)
+exclusions: list("data-raw", "tests")

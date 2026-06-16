@@ -1,7 +1,7 @@
 #' Shiny module providing GUI and server logic for the subscription v2 tab
 #'
 #' @param id Character string module namespace
-NULL
+#' @return An shiny app ui object
 
 abonnement_ui <- function(id) {
 
@@ -15,7 +15,7 @@ abonnement_ui <- function(id) {
   )
 }
 
-abonnement_server <- function(id) {
+abonnement_server <- function(id, user) {
 
   ## nye abonnement
   ## Objects currently shared among subscription and dispathcment
@@ -38,7 +38,7 @@ abonnement_server <- function(id) {
 
   ## Subscription
   rapbase::autoReportServer(
-    id = id, registryName = "rapRegTemplate",
-    type = "subscription", reports = reports, orgs = orgs, freq = "quarter"
+    id = id, registryName = "nyre",
+    type = "subscription", reports = reports, orgs = orgs, freq = "quarter", user = user
   )
 }

@@ -1,12 +1,9 @@
-#' Provide dataframe of registry data
-#'
 #' Provides a dataframe containing data from a registry
 #'
-#' @param registryName String providing the current registryName
 #' @return regData data frame
 #' @export
 
-getRegData <- function(registryName) {
+getRegData <- function() {
 
   # nocov start
   query <- "
@@ -19,7 +16,7 @@ GROUP BY
   AvdRESH;
 "
 
-  rapbase::loadRegData(registryName, query)
+  rapbase::loadRegData("data", query)
   # nocov end
 
 }

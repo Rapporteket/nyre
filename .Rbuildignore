@@ -9,3 +9,7 @@
 ^\.lintr$
 ^\.github$
 ^renovate.json$
+^dev$
+^data-raw$
+^\.positai$
+^\.claude$

@@ -4,12 +4,12 @@ params:
   var: mpg
   bins: 5
 title: Samlerapport
-subtitle: en eksempelrapport fra rapRegTemplate
+subtitle: en eksempelrapport fra nyre
 author: Rapporteket
 userFullName: Tore Tester
 registryName: SKDE
-reglogo: '`r system.file("logo.png", package = "rapRegTemplate")`'
-regtext: '`r readLines(system.file("shortDescription.txt", package = "rapRegTemplate"))`'
+reglogo: '`r system.file("logo.png", package = "nyre")`'
+regtext: '`r readLines(system.file("shortDescription.txt", package = "nyre"))`'
 date: '`r format(Sys.time(), "%d. %B %Y")`'
 abstract: Om rapporten trenger et sammendrag kan det settes inn her
 ---
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 # Samlerapport
-Dette er eksempel på en samlerapport som er egnet til å kobinere presentasjon
+Dette er eksempel på en samlerapport som er egnet til å kombinere presentasjon
 av dynamisk tekst, tabeller og figurer. Samlerapporter kan vises i selve
 Rapporeket, lastes ned eller sendes (rutinemessig) per epost til de som ønsker
 det.
@@ -35,7 +35,7 @@ Idag, `r format(Sys.Date(), "%A %d. %b %Y")` er det
 
 
 ## Eksempel på tabell
-Tabell \@ref(tab:eksTab) under er kjedelig, men illustrerer poenget.
+Tabell \@ref(tab:eksTab) under er fin, og illustrerer poenget.
 
 ```{r eksTab}
 dt <- mtcars[1:6, ][params$var]
@@ -50,5 +50,5 @@ rapbase::mst(tab = dt, type = params$type, cap = cap)
 Samlerapporter kan også inneholde figurer basert på data slik som vist i Figur \@ref(fig:eksFig).
 
 ```{r eksFig, echo=FALSE, out.width="80%", fig.cap=paste("Eksempelfigur som viser frekvensfordelingen av", params$var, "fra mtcars.")}
-f <- rapRegTemplate::makeHist(df = mtcars, var = params$var, bins = params$bins, makeTable = FALSE)
+f <- nyre::makeSimpleHist(df = mtcars, var = params$var, bins = params$bins, makeTable = FALSE)
 ```
